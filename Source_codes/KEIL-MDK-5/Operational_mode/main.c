@@ -1,3 +1,8 @@
+// checking Operational modes on STM32, wheenever interrupt is occure controller switches from THREAD mode to HANDLER mode.
+// by default controller is on THRRREAd mode. 
+// check follwing code on debug mode setting break points
+
+
 
 #include "stm32f407xx.h"
 
