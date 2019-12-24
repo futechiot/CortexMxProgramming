@@ -5,8 +5,9 @@
 
 
 #include "stm32f407xx.h"
-
+#include<stdint.h>
 //we have to implement the watchdog interrupt handler 
+// implement handler function for triggered watchdog interrupt handler
 
 void WWDG_IRQHandler(void)
 {
@@ -17,8 +18,8 @@ void WWDG_IRQHandler(void)
 void generate_interrupt(void)
 {
 	//Lets simulate the watchdog interrupt
-	NVIC_EnableIRQ(WWDG_IRQn);
-	NVIC_SetPendingIRQ(WWDG_IRQn);
+	NVIC_EnableIRQ(WWDG_IRQn); //simulating watchdog interrupt 
+	NVIC_SetPendingIRQ(WWDG_IRQn);//trigring watchdog interrupt
 }
 
 int main(void)
